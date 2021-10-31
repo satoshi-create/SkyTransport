@@ -1,15 +1,17 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import "../main.css"
+import logoImg from "../images/logo.png"
 
 const index = () => {
   return (
     <div>
-      <header className="heading">
-        <div>
-          <img alt="favicon" />
+      <header className="heading partsGrid">
+        <div className="grid12">
+          <img src={logoImg} alt="logo" className="logo" />
           <div className="site-title">SkyTransport</div>
-          <ul className="nav">
+          <button className="nav-icon btn">nav</button>
+          <ul className="nav-menu">
             <li> <Link to="/">ホーム</Link></li>
             <li> <Link to="/">事業概要</Link></li>
             <li> <Link to="/">お問い合わせ</Link></li>
@@ -109,7 +111,7 @@ const index = () => {
       <footer className="footer">
         <p>© 2021 SkyTransport all right reserved</p>
       </footer>
-    </div>
+    </div >
   )
 }
 

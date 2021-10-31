@@ -5,6 +5,7 @@ Font
 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans+Condensed:wght@700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
 /*
 =============== 
 Root
@@ -15,11 +16,11 @@ Root
   --clr-accent:#f5ae08;
   --clr-primary-01:#2285d1;
   --clr-primary-02:#52aef5;
+  --clr-primary-03:#003054;
   --clr-light-gray:#b3b3b3;
-  --clr-dark-gray:#003054;
   --clr-black:#222222;
   --my-font:"Noto Sans JP",sans-serif;
-  --en-font:""Open Sans,sans-serif;
+  --en-font:"Open Sans Condensed",sans-serif;
   --max-width:1088px
 }
 /*
@@ -89,4 +90,72 @@ img{
   height: auto;
   object-fit: cover;
   vertical-align: bottom;
+}
+.btn{
+  display: inline-block;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+/* グリットレイアウト */
+.partsGrid{
+  display: grid;
+  grid-template-columns: minmax(6vw,1fr) minmax(auto,1088px) minmax(6vw,1fr);
+}
+.partsGrid > *{
+  grid-column: 2;
+}
+.grid12{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+.grid12 > *{
+  grid-column: 1/-1;
+}
+@media (min-width:768px){
+  .grid12{
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+
+/* header */
+.heading{
+    padding-top: 30px;
+}
+/* .heading.partsGrid > *{
+  grid-column: 1/-1;
+} */
+.heading .logo{
+  grid-column: span 1;
+  align-self: center;
+}
+.heading .site-title{
+  grid-column: span 1;
+  align-self: center;
+  font-family: var(--en-font);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--clr-primary-03);
+}
+.nav-icon{
+  grid-column: span 1 / -1;
+}
+.nav-menu{
+  display: none;
+}
+@media (min-width:768px){
+  .nav-icon{
+    display: none;
+  }
+  .nav-menu{
+    justify-self: flex-end;
+    grid-column: span 6 /-1;
+    align-self: center;
+    display: block;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 20px;
+  }
 }
