@@ -6,7 +6,7 @@ import logoImg from "../images/logo.png"
 const index = () => {
   return (
     <div>
-      <header className="heading partsGrid">
+      <header className="heading headingGrid">
         <div className="grid12">
           <img src={logoImg} alt="logo" className="logo" />
           <div className="site-title">SkyTransport</div>

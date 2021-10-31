@@ -19,6 +19,7 @@ Root
   --clr-primary-03:#003054;
   --clr-light-gray:#b3b3b3;
   --clr-black:#222222;
+  --clr-white:#fff;
   --my-font:"Noto Sans JP",sans-serif;
   --en-font:"Open Sans Condensed",sans-serif;
   --max-width:1088px
@@ -103,6 +104,10 @@ img{
   display: grid;
   grid-template-columns: minmax(6vw,1fr) minmax(auto,1088px) minmax(6vw,1fr);
 }
+.headingGrid{
+  display: grid;
+  grid-template-columns: minmax(3vw,1fr) minmax(auto,1088px) minmax(3vw,1fr);
+}
 .partsGrid > *{
   grid-column: 2;
 }
@@ -124,9 +129,9 @@ img{
 .heading{
     padding-top: 30px;
 }
-/* .heading.partsGrid > *{
-  grid-column: 1/-1;
-} */
+.heading.headingGrid > *{
+  grid-column: 2;
+}
 .heading .logo{
   grid-column: span 1;
   align-self: center;
@@ -157,5 +162,21 @@ img{
     display: grid;
     grid-auto-flow: column;
     column-gap: 20px;
+  }
+}
+
+.footer{
+  background-color: var(--clr-black);
+  height: 263px;
+  display: grid;
+  place-items: center;
+}
+.footer p{
+  font-size: 13px;
+  color: var(--clr-white);
+}
+@media (min-width:768px){
+  .footer{
+    height: 100px;
   }
 }
