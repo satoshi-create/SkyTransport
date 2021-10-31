@@ -6,6 +6,8 @@ Font
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans+Condensed:wght@700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Zen+Antique&display=swap');
 /*
 =============== 
 Root
@@ -22,7 +24,8 @@ Root
   --clr-white:#fff;
   --my-font:"Noto Sans JP",sans-serif;
   --en-font:"Open Sans Condensed",sans-serif;
-  --max-width:1088px
+  --zen-font:'Zen Antique', serif;;
+  --max-width:1088px;
 }
 /*
 =============== 
@@ -165,6 +168,7 @@ img{
   }
 }
 
+/* footer */
 .footer{
   background-color: var(--clr-black);
   height: 263px;
@@ -179,4 +183,81 @@ img{
   .footer{
     height: 100px;
   }
+}
+
+/*
+=============== 
+index parts
+===============
+*/
+
+/* hero */
+.hero{
+  background-image: url("./images/map-hero.png");
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: 70% 70%;
+  padding-top: 30px;
+}
+.hero h1{
+  grid-row: 1;
+  grid-column: span 3;
+  align-self: flex-end;
+  line-height: 1.5;
+  min-width: 8em;
+}
+.hero .btn{
+  grid-row: 2;
+  align-self: start;
+  grid-column: span 3;
+  justify-self: flex-end;
+  align-self: flex-start;
+  background-color: var(--clr-accent);
+  border-radius: 25px;
+  padding: 11px 51px;
+  width: 200px;
+  color: var(--clr-white);
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.hero .zen{
+  font-family: var(--zen-font);
+  color: var(--clr-primary-02);
+  font-size: 40px;
+  display: inline-block;
+}
+.hero .sora1{
+  transform: rotate(-30deg);
+}
+.hero .sora2{
+  transform: rotate(-40deg);
+}
+.hero figure{
+  grid-row: 3;
+  grid-column: span 3 /-1;
+  align-self: flex-end;
+  justify-self: flex-end;
+  width: 159px; 
+}
+.msg{
+  background-color: var(--clr-primary-01);
+  z-index: -1;
+  padding: 80px 0;
+  display: grid;
+  place-items: center;
+  clip-path: polygon(0 20%, 100% 0, 100% 84%, 0% 100%);
+  position: relative;
+}
+.msg .msg-box{
+  width: 86vw;
+  margin: auto;
+  color: var(--clr-white);
+}
+.msg h2{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.msg p{
+  line-height: 2;
 }

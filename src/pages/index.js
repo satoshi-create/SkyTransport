@@ -2,6 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import "../main.css"
 import logoImg from "../images/logo.png"
+import droonImg from "../images/droon.png"
 
 const index = () => {
   return (
@@ -18,16 +19,27 @@ const index = () => {
           </ul>
         </div>
       </header>
-      <div className="hero">
-        <h1>ソラから宅配を変えるチャレンジ</h1>
-        <button className="btn">事業を見る</button>
-        <img alt="droon" />
-      </div>
-      <section className="msg">
-        <h2>陸からソラヘ</h2>
-        <p>いま、宅配便の世界は、大きな変化を遂げようとしています。ドローンをはじめとするテクノロジーの発展、インターネットの普及、ロジスティクスの充実――先端的な技術を組み合わせることで、陸だけではなく空からの輸送が現実のものとなりつつあります。当社はドローンを活用した宅配便ネットワークの可能性を探ってまいります</p>
+      <section className="hero partsGrid">
+        <div className="grid12">
+          <h1>
+            <span class="zen sora1">ソ</span>
+            <span class="zen sora2">ラ</span>
+            から宅配を<br />
+            変えるチャレンジ
+          </h1>
+          <button className="btn">事業を見る</button>
+          <figure>
+            <img src={droonImg} alt="droon" />
+          </figure>
+        </div>
       </section>
-      <section className="services">
+      <section className="msg">
+        <div className="msg-box">
+          <h2>陸からソラヘ</h2>
+          <p>いま、宅配便の世界は、大きな変化を遂げようとしています。ドローンをはじめとするテクノロジーの発展、インターネットの普及、ロジスティクスの充実――先端的な技術を組み合わせることで、陸だけではなく空からの輸送が現実のものとなりつつあります。当社はドローンを活用した宅配便ネットワークの可能性を探ってまいります</p>
+        </div>
+      </section>
+      <section className="services partsGrid">
         <div className="section-title">
           <img alt="droon-icon" />
           <h2>services</h2>
@@ -50,7 +62,7 @@ const index = () => {
           </div>
         </div>
       </section>
-      <section className="company">
+      <section className="company partsGrid">
         <div className="section-title">
           <img alt="droon-icon" />
           <h2>company</h2>
