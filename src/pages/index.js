@@ -3,6 +3,11 @@ import React from 'react'
 import "../main.css"
 import logoImg from "../images/logo.png"
 import droonImg from "../images/droon.png"
+import droonIcon from "../images/droon-icon.svg"
+import cityImg from "../images/city.png"
+import localCityImg from "../images/local-city.png"
+import islandImg from "../images/island.png"
+import Button from './components/Button'
 
 const index = () => {
   return (
@@ -11,7 +16,7 @@ const index = () => {
         <div className="grid12">
           <img src={logoImg} alt="logo" className="logo" />
           <div className="site-title">SkyTransport</div>
-          <button className="nav-icon btn">nav</button>
+          <button className="nav-icon">nav</button>
           <ul className="nav-menu">
             <li> <Link to="/">ホーム</Link></li>
             <li> <Link to="/">事業概要</Link></li>
@@ -27,38 +32,42 @@ const index = () => {
             から宅配を<br />
             変えるチャレンジ
           </h1>
-          <button className="btn">事業を見る</button>
+          <Button children={"事業を見る"}/>
           <figure>
             <img src={droonImg} alt="droon" />
           </figure>
         </div>
       </section>
-      <section className="msg">
-        <div className="msg-box">
+      <section className="msg partsGrid">
+        <div className="grid12">
           <h2>陸からソラヘ</h2>
           <p>いま、宅配便の世界は、大きな変化を遂げようとしています。ドローンをはじめとするテクノロジーの発展、インターネットの普及、ロジスティクスの充実――先端的な技術を組み合わせることで、陸だけではなく空からの輸送が現実のものとなりつつあります。当社はドローンを活用した宅配便ネットワークの可能性を探ってまいります</p>
         </div>
       </section>
       <section className="services partsGrid">
         <div className="section-title">
-          <img alt="droon-icon" />
+          <img src={droonIcon} alt="droon-icon" />
           <h2>services</h2>
         </div>
-        <div className="item-boxs">
+        <div className="underline"></div>
+        <div className="item-boxs grid12">
           <div className="item-box">
-            <img src="city" />
+            <img src={cityImg} alt="city" />
             <h3>都市エリア</h3>
             <p>東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。</p>
+            <Button children={"事業を見る"}/>
           </div>
           <div className="item-box">
-            <img src="local-city" />
+            <img src={localCityImg} alt="local-city" />
             <h3>地方エリア</h3>
             <p>東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。</p>
+            <Button children={"事業を見る"}/>
           </div>
           <div className="item-box">
-            <img src="island" />
+            <img src={islandImg} alt="island" />
             <h3>離島エリア</h3>
             <p>東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。</p>
+            <Button children={"事業を見る"}/>
           </div>
         </div>
       </section>
