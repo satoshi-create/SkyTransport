@@ -116,14 +116,14 @@ const index = () => {
           </figure>
         </div>
       </section>
-      <section className="contact">
-        <div className="section-title">
-          <img src={droonIcon} alt="droon-icon" />
-          <h2>contact</h2>
-          <div className="underline"></div>
-        </div>
-        <div>
-          <p>疑問、質問がありましたらお気軽にご連絡ください。</p>
+      <section className="contact partsGrid">
+        <div className="double-border grid12">
+          <div className="section-title">
+            <img src={droonIcon} alt="droon-icon" />
+            <h2>contact</h2>
+            <div className="underline"></div>
+          </div>
+          <p className="text">疑問、質問がありましたらお気軽にご連絡ください。</p>
           <form>
             <p>
               <label>
@@ -134,13 +134,13 @@ const index = () => {
             <p>
               <label>
                 <span className="sr-only">メールアドレス</span>
-                <input type="text" name="email" placeholder="メールアドレス" />
+                <input type="email" name="email" placeholder="メールアドレス" />
               </label>
             </p>
             <p>
               <label>
                 <span className="sr-only">メッセージ</span>
-                <input type="text" name="message" placeholder="メッセージ" />
+                <textarea type="text" name="message" placeholder="メッセージ" />
               </label>
             </p>
             <p>
