@@ -7,6 +7,8 @@ import droonIcon from "../images/droon-icon.svg"
 import cityImg from "../images/city.png"
 import localCityImg from "../images/local-city.png"
 import islandImg from "../images/island.png"
+import twitterIcon from '../images/twitter.svg'
+import mapImg from '../images/map.png'
 import Button from './components/Button'
 
 const index = () => {
@@ -32,7 +34,7 @@ const index = () => {
             から宅配を<br />
             変えるチャレンジ
           </h1>
-          <Button children={"事業を見る"}/>
+          <Button children={"事業を見る"} />
           <figure>
             <img src={droonImg} alt="droon" />
           </figure>
@@ -48,59 +50,77 @@ const index = () => {
         <div className="section-title">
           <img src={droonIcon} alt="droon-icon" />
           <h2>services</h2>
+          <div className="underline"></div>
         </div>
-        <div className="underline"></div>
         <div className="item-boxs grid12">
           <div className="item-box">
             <img src={cityImg} alt="city" />
             <h3>都市エリア</h3>
             <p>東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。</p>
-            <Button children={"事業を見る"}/>
+            <Button children={"事業を見る"} />
           </div>
           <div className="item-box">
             <img src={localCityImg} alt="local-city" />
             <h3>地方エリア</h3>
             <p>東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。</p>
-            <Button children={"事業を見る"}/>
+            <Button children={"事業を見る"} />
           </div>
           <div className="item-box">
             <img src={islandImg} alt="island" />
             <h3>離島エリア</h3>
             <p>東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。</p>
-            <Button children={"事業を見る"}/>
+            <Button children={"事業を見る"} />
           </div>
         </div>
       </section>
       <section className="company partsGrid">
         <div className="section-title">
-          <img alt="droon-icon" />
+          <img src={droonIcon} alt="droon-icon" />
           <h2>company</h2>
+          <div className="underline"></div>
         </div>
-        <dl className="text">
-          <dt>用語</dt>
-          <dd>用語に対する説明</dd>
-          <dt>用語</dt>
-          <dd>用語に対する説明</dd>
-          <dt>用語</dt>
-          <dd>用語に対する説明</dd>
-          <dt>用語</dt>
-          <dd>用語に対する説明</dd>
-          <dt>用語</dt>
-          <dd>用語に対する説明</dd>
-          <dt>用語</dt>
-          <dd>用語に対する説明</dd>
-        </dl>
-        <ul className="sns">
-          <li><Link to="/">twitter</Link></li>
-          <li><Link to="/">twitter</Link></li>
-          <li><Link to="/">twitter</Link></li>
-        </ul>
-        <div className="map">map</div>
+        <div className="grid12">
+          <dl className="text grid12">
+            <dt>会社名</dt>
+            <dd>Sky Transport 株式会社</dd>
+            <dt>代表者</dt>
+            <dd>宅配 太郎</dd>
+            <dt>所在地</dt>
+            <dd>〒194-0021 東京都町田市中町1丁目19-6</dd>
+            <dt>電話番号</dt>
+            <dd>000-000-0000</dd>
+            <dt>営業時間</dt>
+            <dd>平日9:00-18:00（土日祝は休業）</dd>
+            <dt>設立</dt>
+            <dd>2015年1月1日</dd>
+            <dt>事業内容</dt>
+            <dd>◎ドローンを活用した新しい物流ネットワークの構想<br />
+              ◎宅配便請負業</dd>
+          </dl>
+          <ul className="sns">
+            <li><Link to="/">
+              <img src={twitterIcon} alt="twtter-icon" />
+            </Link>
+            </li>
+            <li><Link to="/">
+              <img src={twitterIcon} alt="twtter-icon" />
+            </Link>
+            </li>
+            <li><Link to="/">
+              <img src={twitterIcon} alt="twtter-icon" />
+            </Link>
+            </li>
+          </ul>
+          <figure className="map">
+            <img src={mapImg} alt="map" />
+          </figure>
+        </div>
       </section>
       <section className="contact">
         <div className="section-title">
-          <img alt="droon-icon" />
+          <img src={droonIcon} alt="droon-icon" />
           <h2>contact</h2>
+          <div className="underline"></div>
         </div>
         <div>
           <p>疑問、質問がありましたらお気軽にご連絡ください。</p>
