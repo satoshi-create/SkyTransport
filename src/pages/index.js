@@ -10,11 +10,18 @@ import islandImg from "../images/island.png"
 import twitterIcon from '../images/twitter.svg'
 import mapImg from '../images/map.png'
 import Button from './components/Button'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const index = () => {
   return (
     <div>
       <header className="heading headingGrid">
+        <StaticImage
+          alt="hero-img"
+          src="../images/map-hero.png"
+          className="hero-img"
+          placeholder="tracedSVG"
+        />
         <div className="grid12">
           <img src={logoImg} alt="logo" className="logo" />
           <div className="site-title">SkyTransport</div>
@@ -54,19 +61,31 @@ const index = () => {
         </div>
         <div className="item-boxs grid12">
           <div className="item-box">
-            <img src={cityImg} alt="city" />
+            <StaticImage
+              alt="city"
+              src="../images/city.png"
+              placeholder="blurred"
+            />
             <h3>都市エリア</h3>
             <p>東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。</p>
             <Button children={"事業を見る"} />
           </div>
           <div className="item-box">
-            <img src={localCityImg} alt="local-city" />
+            <StaticImage
+              alt="local-city"
+              src="../images/local-city.png"
+              placeholder="blurred"
+            />
             <h3>地方エリア</h3>
             <p>東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。</p>
             <Button children={"事業を見る"} />
           </div>
           <div className="item-box">
-            <img src={islandImg} alt="island" />
+            <StaticImage
+              alt="island"
+              src="../images/island.png"
+              placeholder="blurred"
+            />
             <h3>離島エリア</h3>
             <p>東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。</p>
             <Button children={"事業を見る"} />
@@ -74,6 +93,12 @@ const index = () => {
         </div>
       </section>
       <section className="company partsGrid">
+        <StaticImage
+          alt="map-company"
+          src="../images/map-company.png"
+          className="company-img"
+          placeholder="blurred"
+        />
         <div className="section-title">
           <img src={droonIcon} alt="droon-icon" />
           <h2>company</h2>
@@ -117,6 +142,12 @@ const index = () => {
         </div>
       </section>
       <section className="contact partsGrid">
+        <StaticImage
+          alt="map-contact"
+          src="../images/map-contact.png"
+          className="contact-img"
+          placeholder="tracedSVG"
+        />
         <div className="double-border grid12">
           <div className="section-title">
             <img src={droonIcon} alt="droon-icon" />

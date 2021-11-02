@@ -152,6 +152,7 @@ img {
 
 /* header */
 .heading {
+  position: relative;
   padding-top: 30px;
 }
 .heading.headingGrid > * {
@@ -215,11 +216,12 @@ index parts
 
 /* hero */
 .hero {
-  background-image: url("./images/map-hero.png");
+  /* background-image: url("./images/map-hero.png"); */
   height: 60vh;
-  background-repeat: no-repeat;
-  background-position: 70% 70%;
+  /* background-repeat: no-repeat;
+  background-position: 70% 70%; */
   padding-top: 30px;
+  position: relative;
 }
 .hero h1 {
   grid-row: 1;
@@ -262,12 +264,21 @@ index parts
 .hero img {
   width: 15rem;
 }
+.hero-img{
+  position: absolute;
+  top: 210px;
+  left: -10px;
+  z-index: -1;
+}
 @media (min-width: 768px) {
   .hero {
-    background-position: 20% 70%;
+    background-position: 40% 70%;
   }
   .hero figure {
     grid-column: span 5 /-2;
+  }
+  .hero-img{
+    top: 110px;
   }
 }
 
@@ -344,7 +355,7 @@ index parts
   background-color: var(--clr-primary-00);
   position: relative;
 }
-.company::before {
+/* .company::before {
   position: absolute;
   top: -90px;
   left: -50px;
@@ -352,6 +363,11 @@ index parts
   display: block;
   transform: rotate(75deg);
   overflow: hidden;
+} */
+.company-img{
+  position: absolute;
+  top: -90px;
+  left: -50px;
 }
 .company .section-title {
   padding-top: 53px;
@@ -363,7 +379,7 @@ index parts
 }
 .company .text {
   display: grid;
-  font-size: 13px;
+  font-size: 14px;
   z-index: 2;
 }
 .company .text.grid12 {
@@ -421,12 +437,24 @@ index parts
 
 /* contact */
 .contact {
-  padding: 30px 0;
+  padding: 30px 0 56px 0;
+  position: relative;
+  /* background-image: url(./images/map-contact.png); */
+  /* background-repeat: no-repeat;
+  background-position: 80% -353%; */
+  overflow: hidden;
 }
+.contact-img{
+  position: absolute;
+  top: 200px;
+  left: -250px;
+  z-index: -1;
+} 
 .contact .double-border {
   border: thick double var(--clr-primary-02);
   margin: 0 -15px;
   padding: 0 15px;
+  background-color: rgba(255, 255, 255, 0.336);
 }
 .contact .section-title {
   padding-top: 53px;
@@ -477,6 +505,9 @@ index parts
 
 
 @media (min-width: 768px){
+  .contact{
+    background-position: 30% -140%;
+  }
   .contact .section-title{
     grid-row: 1;
   }
