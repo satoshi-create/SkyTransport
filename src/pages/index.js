@@ -4,11 +4,7 @@ import "../main.css"
 import logoImg from "../images/logo.png"
 import droonImg from "../images/droon.png"
 import droonIcon from "../images/droon-icon.svg"
-import cityImg from "../images/city.png"
-import localCityImg from "../images/local-city.png"
-import islandImg from "../images/island.png"
 import twitterIcon from '../images/twitter.svg'
-import mapImg from '../images/map.png'
 import Button from './components/Button'
 import { StaticImage } from 'gatsby-plugin-image'
 
@@ -16,12 +12,6 @@ const index = () => {
   return (
     <div>
       <header className="heading headingGrid">
-        <StaticImage
-          alt="hero-img"
-          src="../images/map-hero.png"
-          className="hero-img"
-          placeholder="tracedSVG"
-        />
         <div className="grid12">
           <img src={logoImg} alt="logo" className="logo" />
           <div className="site-title">SkyTransport</div>
@@ -34,18 +24,24 @@ const index = () => {
         </div>
       </header>
       <section className="hero partsGrid">
-        <div className="grid12">
-          <h1>
-            <span class="zen sora1">ソ</span>
-            <span class="zen sora2">ラ</span>
-            から宅配を<br />
-            変えるチャレンジ
-          </h1>
-          <Button children={"事業を見る"} />
-          <figure>
-            <img src={droonImg} alt="droon" />
-          </figure>
-        </div>
+        <StaticImage
+          alt="hero-img"
+          src="../images/map-hero.png"
+          className="hero-img"
+          placeholder="tracedSVG"
+        />
+          <div className="grid12">
+            <h1>
+              <span class="zen sora1">ソ</span>
+              <span class="zen sora2">ラ</span>
+              から宅配を<br />
+              変えるチャレンジ
+            </h1>
+            <Button children={"事業を見る"} />
+            <figure className="droon-fig">
+              <img src={droonImg} alt="droon" />
+            </figure>
+          </div>
       </section>
       <section className="msg partsGrid">
         <div className="grid12">
@@ -93,12 +89,14 @@ const index = () => {
         </div>
       </section>
       <section className="company partsGrid">
-        <StaticImage
-          alt="map-company"
-          src="../images/map-company.png"
-          className="company-img"
-          placeholder="blurred"
-        />
+        <figure className="company-fig">
+          <StaticImage
+            alt="map-company"
+            src="../images/map-company.png"
+            className="company-img"
+            placeholder="tracedSVG"
+          />
+        </figure>
         <div className="section-title">
           <img src={droonIcon} alt="droon-icon" />
           <h2>company</h2>
@@ -137,17 +135,24 @@ const index = () => {
             </li>
           </ul>
           <figure className="map">
-            <img src={mapImg} alt="map" />
+            <StaticImage
+              alt="map"
+              src="../images/map.png" placeholder="tracedSVG"
+              placeholder="blurred"
+            />
+            {/* <img src={mapImg} alt="map" /> */}
           </figure>
         </div>
       </section>
       <section className="contact partsGrid">
-        <StaticImage
-          alt="map-contact"
-          src="../images/map-contact.png"
-          className="contact-img"
-          placeholder="tracedSVG"
-        />
+        <figure className="contact-fig">
+          <StaticImage
+            alt="map-contact"
+            src="../images/map-contact.png"
+            className="contact-img"
+            placeholder="tracedSVG"
+          />
+        </figure>
         <div className="double-border grid12">
           <div className="section-title">
             <img src={droonIcon} alt="droon-icon" />
