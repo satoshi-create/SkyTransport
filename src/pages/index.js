@@ -1,48 +1,14 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import "../main.css"
-import logoImg from "../images/logo.png"
-import droonImg from "../images/droon.png"
 import droonIcon from "../images/droon-icon.svg"
 import twitterIcon from '../images/twitter.svg'
-import Button from './components/Button'
+import Button from '../components/Button'
 import { StaticImage } from 'gatsby-plugin-image'
+import Layout  from "../components/Layout";
 
 const index = () => {
   return (
-    <div>
-      <header className="heading headingGrid">
-        <div className="grid12">
-          <img src={logoImg} alt="logo" className="logo" />
-          <div className="site-title">SkyTransport</div>
-          <button className="nav-icon">nav</button>
-          <ul className="nav-menu">
-            <li> <Link to="/">ホーム</Link></li>
-            <li> <Link to="/">事業概要</Link></li>
-            <li> <Link to="/">お問い合わせ</Link></li>
-          </ul>
-        </div>
-      </header>
-      <section className="hero partsGrid">
-        <StaticImage
-          alt="hero-img"
-          src="../images/map-hero.png"
-          className="hero-img"
-          placeholder="tracedSVG"
-        />
-          <div className="grid12">
-            <h1>
-              <span class="zen sora1">ソ</span>
-              <span class="zen sora2">ラ</span>
-              から宅配を<br />
-              変えるチャレンジ
-            </h1>
-            <Button children={"事業を見る"} />
-            <figure className="droon-fig">
-              <img src={droonImg} alt="droon" />
-            </figure>
-          </div>
-      </section>
+    <Layout>
       <section className="msg partsGrid">
         <div className="grid12">
           <h2>陸からソラヘ</h2>
@@ -185,10 +151,7 @@ const index = () => {
           </form>
         </div>
       </section>
-      <footer className="footer">
-        <p>© 2021 SkyTransport all right reserved</p>
-      </footer>
-    </div >
+    </Layout >
   )
 }
 

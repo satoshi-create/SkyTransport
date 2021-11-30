@@ -524,3 +524,9 @@ index parts
     margin-bottom: 0;
   }
 }
+
+/* error page */
+.error{
+  padding: 100px 10px 50px;
+  text-align: center;
+}
