@@ -1,20 +1,22 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import droonIcon from "../images/droon-icon.svg"
-import twitterIcon from '../images/twitter.svg'
-import Button from '../components/Button'
-import { StaticImage } from 'gatsby-plugin-image'
-import Layout  from "../components/Layout";
+import { Link } from "gatsby";
+import React from "react";
+import droonIcon from "../images/droon-icon.svg";
+import twitterIcon from "../images/twitter.svg";
+import Button from "../components/Button";
+import { StaticImage } from "gatsby-plugin-image";
+import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 
 const index = () => {
   return (
     <Layout>
-      <Seo title="home"/>
+      <Seo title="home" />
       <section className="msg partsGrid">
         <div className="grid12">
           <h2>陸からソラヘ</h2>
-          <p>いま、宅配便の世界は、大きな変化を遂げようとしています。ドローンをはじめとするテクノロジーの発展、インターネットの普及、ロジスティクスの充実――先端的な技術を組み合わせることで、陸だけではなく空からの輸送が現実のものとなりつつあります。当社はドローンを活用した宅配便ネットワークの可能性を探ってまいります</p>
+          <p>
+            いま、宅配便の世界は、大きな変化を遂げようとしています。ドローンをはじめとするテクノロジーの発展、インターネットの普及、ロジスティクスの充実――先端的な技術を組み合わせることで、陸だけではなく空からの輸送が現実のものとなりつつあります。当社はドローンを活用した宅配便ネットワークの可能性を探ってまいります
+          </p>
         </div>
       </section>
       <section className="services partsGrid">
@@ -31,7 +33,9 @@ const index = () => {
               placeholder="blurred"
             />
             <h3>都市エリア</h3>
-            <p>東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。</p>
+            <p>
+              東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。
+            </p>
             <Button children={"事業を見る"} />
           </div>
           <div className="item-box">
@@ -41,7 +45,9 @@ const index = () => {
               placeholder="blurred"
             />
             <h3>地方エリア</h3>
-            <p>東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。</p>
+            <p>
+              東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。
+            </p>
             <Button children={"事業を見る"} />
           </div>
           <div className="item-box">
@@ -51,7 +57,9 @@ const index = () => {
               placeholder="blurred"
             />
             <h3>離島エリア</h3>
-            <p>東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。</p>
+            <p>
+              東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。
+            </p>
             <Button children={"事業を見る"} />
           </div>
         </div>
@@ -85,31 +93,41 @@ const index = () => {
             <dt>設立</dt>
             <dd>2015年1月1日</dd>
             <dt>事業内容</dt>
-            <dd>◎ドローンを活用した新しい物流ネットワークの構想<br />
-              ◎宅配便請負業</dd>
+            <dd>
+              ◎ドローンを活用した新しい物流ネットワークの構想
+              <br />
+              ◎宅配便請負業
+            </dd>
           </dl>
           <ul className="sns">
-            <li><Link to="/">
-              <img src={twitterIcon} alt="twtter-icon" />
-            </Link>
+            <li>
+              <Link to="/">
+                <img src={twitterIcon} alt="twtter-icon" />
+              </Link>
             </li>
-            <li><Link to="/">
-              <img src={twitterIcon} alt="twtter-icon" />
-            </Link>
+            <li>
+              <Link to="/">
+                <img src={twitterIcon} alt="twtter-icon" />
+              </Link>
             </li>
-            <li><Link to="/">
-              <img src={twitterIcon} alt="twtter-icon" />
-            </Link>
+            <li>
+              <Link to="/">
+                <img src={twitterIcon} alt="twtter-icon" />
+              </Link>
             </li>
           </ul>
-          <figure className="map">
-            <StaticImage
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16015.911668844696!2d139.75838595217266!3d32.45727148252255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x606ab9eeec9d5885%3A0xfce799613c77e5f!2z5aSn5Ye46YOo5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1638261974883!5m2!1sja!2sjp"
+            className="map"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+          {/* <StaticImage
               alt="map"
-              src="../images/map.png" placeholder="tracedSVG"
+              src="../images/map.png"
+              placeholder="tracedSVG"
               placeholder="blurred"
-            />
-            {/* <img src={mapImg} alt="map" /> */}
-          </figure>
+            /> */}
         </div>
       </section>
       <section className="contact partsGrid">
@@ -127,7 +145,9 @@ const index = () => {
             <h2>contact</h2>
             <div className="underline"></div>
           </div>
-          <p className="text">疑問、質問がありましたらお気軽にご連絡ください。</p>
+          <p className="text">
+            疑問、質問がありましたらお気軽にご連絡ください。
+          </p>
           <form>
             <p>
               <label>
@@ -153,8 +173,8 @@ const index = () => {
           </form>
         </div>
       </section>
-    </Layout >
-  )
-}
+    </Layout>
+  );
+};
 
-export default index
+export default index;
