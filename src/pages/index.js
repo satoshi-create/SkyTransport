@@ -5,10 +5,12 @@ import twitterIcon from '../images/twitter.svg'
 import Button from '../components/Button'
 import { StaticImage } from 'gatsby-plugin-image'
 import Layout  from "../components/Layout";
+import Seo from "../components/Seo";
 
 const index = () => {
   return (
     <Layout>
+      <Seo title="home"/>
       <section className="msg partsGrid">
         <div className="grid12">
           <h2>陸からソラヘ</h2>

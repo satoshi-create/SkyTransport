@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: "SkyTransport",
+    description:"ソラから宅配を変えるチャレンジ",
+    lang:"ja",
+    url:"https://keen-galileo-7bd71f.netlify.app"
   },
   plugins: [
     `gatsby-plugin-image`,
