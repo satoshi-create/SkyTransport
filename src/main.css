@@ -104,6 +104,7 @@ img {
   display: inline-block;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 .btn-comp{
   border-radius: 25px;
@@ -563,4 +564,50 @@ index parts
 .error{
   padding: 100px 10px 50px;
   text-align: center;
+}
+
+/* Sidebar */
+.sidebar-wrapper{
+  position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background:#0000008a;
+z-index: 555;
+display: grid;
+place-content: center;
+transform: scale(0);
+transform-origin: top right;
+transition: var(--transition);
+}
+.sidebar-wrapper.show-sidebar{
+  transform: scale(100%);
+}
+.sidebar{
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  display: grid;
+  place-items: center;
+  color: var(--clr-white);
+}
+.sidebar .btn-close{
+  position: absolute;
+top: -8px;
+right: -2px;
+font-size: 40px;
+color: var(--clr-white);
+}
+.sidebar .sidebar-menu{
+  display: grid;
+  row-gap: 30px;
+  justify-items: center;
+}
+.sidebar .sidebar-menu li{
+  font-size: 30px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  align-items: center;
 }
