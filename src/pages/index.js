@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import droonIcon from "../images/droon-icon.svg";
-import twitterIcon from "../images/twitter.svg";
+import { FiTwitter,FiFacebook,FiInstagram } from "react-icons/fi";
 import Button from "../components/Button";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
@@ -102,26 +102,26 @@ const index = () => {
           <ul className="sns">
             <li>
               <Link to="/">
-                <img src={twitterIcon} alt="twtter-icon" />
+                <FiTwitter className="icon"/>
               </Link>
             </li>
             <li>
               <Link to="/">
-                <img src={twitterIcon} alt="twtter-icon" />
+                <FiFacebook  className="icon"/>
               </Link>
             </li>
             <li>
               <Link to="/">
-                <img src={twitterIcon} alt="twtter-icon" />
+                <FiInstagram  className="icon"/>
               </Link>
             </li>
           </ul>
           <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16015.911668844696!2d139.75838595217266!3d32.45727148252255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x606ab9eeec9d5885%3A0xfce799613c77e5f!2z5aSn5Ye46YOo5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1638261974883!5m2!1sja!2sjp"
-          className="map"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16015.911668844696!2d139.75838595217266!3d32.45727148252255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x606ab9eeec9d5885%3A0xfce799613c77e5f!2z5aSn5Ye46YOo5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1638261974883!5m2!1sja!2sjp"
+            className="map"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
         </div>
       </section>
       <section className="contact partsGrid">
