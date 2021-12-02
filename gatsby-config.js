@@ -3,7 +3,7 @@ module.exports = {
     title: "SkyTransport",
     description:"ソラから宅配を変えるチャレンジ",
     lang:"ja",
-    url:"https://keen-galileo-7bd71f.netlify.app"
+    url:"https://sky-transport.netlify.app"
   },
   plugins: [
     `gatsby-plugin-image`,
