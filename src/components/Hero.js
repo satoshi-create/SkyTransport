@@ -1,7 +1,8 @@
 import React from "react";
-import { StaticImage } from 'gatsby-plugin-image'
-import Button from '../components/Button'
-import droonImg from "../images/droon.png"
+import { StaticImage } from "gatsby-plugin-image";
+import Button from "../components/Button";
+import droonImg from "../images/droon.png";
+import { Link } from "gatsby";
 
 const Hero = () => {
   return (
@@ -20,7 +21,9 @@ const Hero = () => {
           <br />
           変えるチャレンジ
         </h1>
-        <Button children={"事業を見る"} />
+        <Link to="/">
+          <Button children={"事業を見る"} />
+        </Link>
         <figure className="droon-fig">
           <img src={droonImg} alt="droon" />
         </figure>

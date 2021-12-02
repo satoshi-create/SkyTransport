@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import droonIcon from "../images/droon-icon.svg";
-import { FiTwitter,FiFacebook,FiInstagram } from "react-icons/fi";
+import { FiTwitter, FiFacebook, FiInstagram } from "react-icons/fi";
 import Button from "../components/Button";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
@@ -36,7 +36,9 @@ const index = () => {
             <p>
               東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。
             </p>
-            <Button children={"事業を見る"} />
+            <Link to="/">
+              <Button children={"事業を見る"} />
+            </Link>
           </div>
           <div className="item-box">
             <StaticImage
@@ -48,7 +50,9 @@ const index = () => {
             <p>
               東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。
             </p>
-            <Button children={"事業を見る"} />
+            <Link to="/">
+              <Button children={"事業を見る"} />
+            </Link>
           </div>
           <div className="item-box">
             <StaticImage
@@ -60,7 +64,9 @@ const index = () => {
             <p>
               東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。
             </p>
-            <Button children={"事業を見る"} />
+            <Link to="/">
+              <Button children={"事業を見る"} />
+            </Link>
           </div>
         </div>
       </section>
@@ -102,17 +108,17 @@ const index = () => {
           <ul className="sns">
             <li>
               <Link to="/">
-                <FiTwitter className="icon"/>
+                <FiTwitter className="icon" />
               </Link>
             </li>
             <li>
               <Link to="/">
-                <FiFacebook  className="icon"/>
+                <FiFacebook className="icon" />
               </Link>
             </li>
             <li>
               <Link to="/">
-                <FiInstagram  className="icon"/>
+                <FiInstagram className="icon" />
               </Link>
             </li>
           </ul>

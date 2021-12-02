@@ -248,16 +248,7 @@ index parts
   line-height: 1.5;
   min-width: 8em;
 }
-.hero .btn {
-  grid-row: 2;
-  align-self: start;
-  grid-column: span 3;
-  justify-self: flex-end;
-  align-self: flex-start;
-  background-color: var(--clr-accent);
-  color: var(--clr-white);
-  margin-top: 20px;
-}
+
 .hero .zen {
   font-family: var(--zen-font);
   color: var(--clr-primary-02);
@@ -269,6 +260,22 @@ index parts
 }
 .hero .sora2 {
   transform: rotate(-40deg);
+}
+.hero .btn {
+  grid-row: 2;
+  align-self: start;
+  grid-column: span 3;
+  justify-self: flex-end;
+  align-self: flex-start;
+  background-color: var(--clr-accent);
+  color: var(--clr-white);
+  margin-top: 20px;
+  transition: var(--transition);
+  border: 1px solid var(--clr-accent);
+}
+.hero .btn:hover{
+ background-color: var(--clr-white);
+ color: var(--clr-accent);
 }
 .hero .droon-fig {
   grid-row: 3;
@@ -341,8 +348,10 @@ index parts
   font-size: 14px;
   justify-self: center;
 }
-.services .item-box .btn {
+.services .item-box a{
   justify-self: center;
+}
+.services .item-box .btn {
   border: 2px solid var(--clr-primary-02);
   color: var(--clr-primary-02);
   background-color: var(--clr-white);
