@@ -8,7 +8,7 @@ const Header = () => {
     <div className="grid12">
       <img src={logoImg} alt="logo" className="logo" />
       <div className="site-title">SkyTransport</div>
-      <button className="nav-icon">nav</button>
+      <button className="nav-icon btn">nav</button>
       <ul className="nav-menu">
         <li> <Link to="/">ホーム</Link></li>
         <li> <Link to="/">事業概要</Link></li>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Button = ({children}) => {
   return (
-    <button className="btn">
+    <button className="btn btn-comp">
       {children}
       </button>
   )
