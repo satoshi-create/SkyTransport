@@ -365,7 +365,7 @@ index parts
   justify-self: center;
 }
 .services .item-box .btn {
-  border: 2px solid var(--clr-primary-02);
+  border: 1px solid var(--clr-primary-02);
   color: var(--clr-primary-02);
   background-color: var(--clr-white);
   transition: var(--transition);
@@ -373,7 +373,7 @@ index parts
 .services .item-box .btn:hover{
   background-color: var(--clr-primary-01);
   color: var(--clr-white);
-  border: var(--clr-white);
+  border: 1px solid var(--clr-white);
 }
 @media (min-width: 768px) {
   .services .item-boxs.grid12 {
@@ -548,9 +548,15 @@ index parts
 }
 .contact form input[type="submit"]{
   background-color: var(--clr-primary-01);
-  border: none;
-  color: #fff;
-  width: 100%;
+  border: 1px solid var(--clr-primary-01);
+  color:var(--clr-white);
+  width: 70%;
+  transition: var(--transition);
+}
+.contact form input[type="submit"]:hover{
+  background-color: var(--clr-primary-00);
+  border: 1px solid var(--clr-primary-01);
+  color: var(--clr-primary-01);
 }
 
 
