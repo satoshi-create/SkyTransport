@@ -3,6 +3,7 @@ import { CgClose } from "react-icons/cg";
 import { Link } from "gatsby";
 import link from "../data/link";
 import { GatsbyContext } from "../context/context.js";
+import socialLinks from "../data/socialLInks";
 
 const Sidebar = () => {
   const { isSidebar, closeSidebar } = useContext(GatsbyContext);
@@ -29,6 +30,16 @@ const Sidebar = () => {
             );
           })}
         </ul>
+        <ul className="sns">
+            {socialLinks.map((item, index) => {
+              const { url, icon } = item;
+              return (
+                <li key={index}>
+                  <Link to={url}>{icon}</Link>
+                </li>
+              );
+            })}
+          </ul>
       </aside>
     </div>
   );

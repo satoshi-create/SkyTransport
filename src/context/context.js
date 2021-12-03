@@ -6,10 +6,12 @@ const GatsbyProvider = ({ children }) => {
   const [isSidebar, setisSidebar] = useState(false)
 
   const openSidebar = () => {
-    setisSidebar(true)
+    setisSidebar(true);
+    document.querySelector("html").classList.add("open");
   }
   const closeSidebar = () => {
-    setisSidebar(false)
+    setisSidebar(false);
+    document.querySelector("html").classList.remove("open");
   }
 
 
