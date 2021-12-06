@@ -343,6 +343,27 @@ index parts
 .services {
   padding: 90px 0;
 }
+.services .serveces-conteiner{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 20px;
+}
+.services .services-btn{
+  font-size: 16px;
+  font-family: var(--my-font);
+  transition: var(--transition);
+}
+.active-btn {
+  color: var(--clr-primary-02);
+  box-shadow: 0 2px var(--clr-primary-02);
+}
+.services .services-btn:hover{
+  color: var(--clr-primary-02);
+  box-shadow: 0 2px var(--clr-primary-02);
+}
+
 .services .item-boxs.grid12 {
   row-gap: 50px;
   grid-auto-flow: column;
@@ -376,6 +397,10 @@ index parts
   border: 1px solid var(--clr-white);
 }
 @media (min-width: 768px) {
+  .services .services-btn {
+    font-size: 20px;
+    font-family: var(--my-font);
+  }
   .services .item-boxs.grid12 {
     grid-auto-flow: column;
   }
@@ -435,10 +460,12 @@ index parts
   justify-items: center;
   justify-content: center;
   grid-column-gap: 30px;
-}
-.company .sns a{
+  color: var(--clr-primary-01);
   cursor: pointer;
+  transition: var(--transition);
+  font-size: 30px;
 }
+
 .company .sns a:hover{
   opacity: .6;
 }
@@ -546,6 +573,9 @@ index parts
 .contact form textarea{
   height: 152px;
 }
+.contact form p:last-child{
+  text-align: center;
+}
 .contact form input[type="submit"]{
   background-color: var(--clr-primary-01);
   border: 1px solid var(--clr-primary-01);
@@ -614,8 +644,8 @@ transition: var(--transition);
 }
 .sidebar .btn-close{
   position: absolute;
-top: -8px;
-right: -2px;
+top: 10px;
+right: 0px;
 font-size: 40px;
 color: var(--clr-white);
 }
@@ -639,7 +669,7 @@ color: var(--clr-white);
   column-gap: 20px;
 }
 
-.open h tml,
+.open html,
 .open body{
   overflow: hidden;
   height: 100%;

@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import droonIcon from "../images/droon-icon.svg";
 import Button from "../components/Button";
+import Services from "../components/Services";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
@@ -19,57 +20,7 @@ const index = () => {
           </p>
         </div>
       </section>
-      <section className="services partsGrid">
-        <div className="section-title">
-          <img src={droonIcon} alt="droon-icon" />
-          <h2>services</h2>
-          <div className="underline"></div>
-        </div>
-        <div className="item-boxs grid12">
-          <div className="item-box">
-            <StaticImage
-              alt="city"
-              src="../images/city.png"
-              placeholder="blurred"
-            />
-            <h3>都市エリア</h3>
-            <p>
-              東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。
-            </p>
-            <Link to="/">
-              <Button children={"事業を見る"} />
-            </Link>
-          </div>
-          <div className="item-box">
-            <StaticImage
-              alt="local-city"
-              src="../images/local-city.png"
-              placeholder="blurred"
-            />
-            <h3>地方エリア</h3>
-            <p>
-              東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。
-            </p>
-            <Link to="/">
-              <Button children={"事業を見る"} />
-            </Link>
-          </div>
-          <div className="item-box">
-            <StaticImage
-              alt="island"
-              src="../images/island.png"
-              placeholder="blurred"
-            />
-            <h3>離島エリア</h3>
-            <p>
-              東京を中心とした都市部で、ドローン宅配の実証実験をおこなっています。
-            </p>
-            <Link to="/">
-              <Button children={"事業を見る"} />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <Services />
       <section className="company partsGrid">
         <figure className="company-fig">
           <StaticImage

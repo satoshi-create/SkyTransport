@@ -4,6 +4,7 @@ const GatsbyContext = React.createContext();
 
 const GatsbyProvider = ({ children }) => {
   const [isSidebar, setisSidebar] = useState(false)
+  const [value, setValue] = useState(0)
 
   const openSidebar = () => {
     setisSidebar(true);
@@ -17,7 +18,7 @@ const GatsbyProvider = ({ children }) => {
 
   return (
     <GatsbyContext.Provider
-      value={{ isSidebar,openSidebar,closeSidebar }}
+      value={{ isSidebar,openSidebar,closeSidebar,value,setValue }}
     >
       {children}
     </GatsbyContext.Provider>
