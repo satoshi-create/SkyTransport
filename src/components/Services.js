@@ -7,7 +7,7 @@ import { GatsbyContext } from "../context/context.js";
 
 const Services = () => {
   const { value, setValue } = useContext(GatsbyContext);
-  const { id, cat, set } = services[value];
+  const { set,cat } = services[value];
   return (
     <section className="services partsGrid">
       <div className="section-title">
@@ -22,7 +22,7 @@ const Services = () => {
               <button
                 key={item.id}
                 onClick={() => setValue(index)}
-                className={`btn services-btn ${index === value && "active-btn"}`}
+                className={`btn services-btn ${index === value && item.cls}`}
               >
                 {item.cat}
               </button>
@@ -32,13 +32,13 @@ const Services = () => {
       </div>
       <div className="item-boxs grid12">
         {set.map((item, index) => {
-          const { image, desc, url } = item;
+          const { image, desc, url,cls } = item;
           return (
-            <div className="item-box">
+            <div className="item-box" key={index}>
               <img src={image} alt={cat} />
               <p>{desc}</p>
               <Link to={url}>
-                <Button children={"事業を見る"} />
+                <Button name={"事業を見る"} cls={cls}/>
               </Link>
             </div>
           );

@@ -22,7 +22,7 @@ const Hero = () => {
           変えるチャレンジ
         </h1>
         <Link to="/">
-          <Button children={"事業を見る"} />
+          <Button name={"事業を見る"} />
         </Link>
         <figure className="droon-fig">
           <img src={droonImg} alt="droon" />

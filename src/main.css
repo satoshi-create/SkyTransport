@@ -355,15 +355,22 @@ index parts
   font-family: var(--my-font);
   transition: var(--transition);
 }
-.active-btn {
-  color: var(--clr-primary-02);
-  box-shadow: 0 2px var(--clr-primary-02);
-}
 .services .services-btn:hover{
   color: var(--clr-primary-02);
   box-shadow: 0 2px var(--clr-primary-02);
 }
-
+.active-btn-primary-02 {
+  color: var(--clr-primary-02);
+  box-shadow: 0 2px var(--clr-primary-02);
+}
+.active-btn-primary-01 {
+  color: var(--clr-primary-01);
+  box-shadow: 0 2px var(--clr-primary-01);
+}
+.active-btn-primary-03 {
+  color: var(--clr-primary-03);
+  box-shadow: 0 2px var(--clr-primary-03);
+}
 .services .item-boxs.grid12 {
   row-gap: 50px;
   grid-auto-flow: column;
@@ -386,10 +393,20 @@ index parts
   justify-self: center;
 }
 .services .item-box .btn {
-  border: 1px solid var(--clr-primary-02);
-  color: var(--clr-primary-02);
   background-color: var(--clr-white);
   transition: var(--transition);
+}
+.btn-primary-02{
+  border: 1px solid var(--clr-primary-02);
+  color: var(--clr-primary-02);
+}
+.btn-primary-01{
+  color: var(--clr-primary-01);
+  border: 1px solid var(--clr-primary-01);
+}
+.btn-primary-03{
+  color: var(--clr-primary-03);
+  border: 1px solid var(--clr-primary-03);
 }
 .services .item-box .btn:hover{
   background-color: var(--clr-primary-01);
